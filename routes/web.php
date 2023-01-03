@@ -23,3 +23,7 @@ Route::get('/user',[UserController::class,'users']);
 // Route::get('/user', function () {
 //     return view('home');
 // });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

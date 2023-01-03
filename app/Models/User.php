@@ -28,10 +28,10 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    // protected $hidden = [
-    //     'password',
-    //     'remember_token',
-    // ];
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
 
     /**
      * The attributes that should be cast.
@@ -42,17 +42,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function setPasswordAttribute($password)
+    // public function setPasswordAttribute($password)
 
-    {
+    // {
 
-     $this->attributes['password'] = bcrypt($password);
-    }
+    //  $this->attributes['password'] = bcrypt($password);
+    // }
 
-    public function getNameAttribute($name)
-    {
-        return 'my name is '. ucfirst($name);
-    }
+    // public function getNameAttribute($name)
+    // {
+    //     return 'my name is '. ucfirst($name);
+    // }
 
 
 }
