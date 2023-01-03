@@ -18,7 +18,7 @@ class UserController extends Controller
 
         ];
 
-        User::create($data);
+        // User::create($data);
 
 
          // dd($user);
