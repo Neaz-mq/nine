@@ -9,6 +9,18 @@ class UserController extends Controller
 {
     public function users()
     {
+
+        $data = [
+
+            'name' => 'noman',
+            'email' => 'noman@gmail.com',
+            'password' => 'pass123',
+
+        ];
+
+        User::create($data);
+
+
          // dd($user);
 
         // $user = new User();
@@ -17,14 +29,14 @@ class UserController extends Controller
         // $user->password = bcrypt('password') ;
         // $user->save();
 
-        // $user = User::all();
-        // return $user;
+        $user = User::all();
+        return $user;
 
         // User::where('id', 3)->delete();
 
-        User::update(['name' => 'morshed']);
+        // User::where('id', 4)->update(['name' => 'morshed']);
 
-
+       
         // DB::insert('insert into users (name,email,password) values (?,?,?)', [
         // 'neaz', 'neaz@gmail.com', 'password',   
 
